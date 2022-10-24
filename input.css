@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  section#main-container {
+    display: grid;
+    grid-template-areas:
+      "image image aside"
+      "image image aside"
+      "heading text aside"
+      "article--1 article--2 article--3";
+    column-gap: 2rem;
+    row-gap: 3.5rem;
+  }
+
+  #heading {
+    grid-area: heading;
+  }
+
+  #text {
+    grid-area: text;
+  }
+
+  #image-desktop {
+    grid-area: image;
+  }
+
+  #sidebar {
+    grid-area: aside;
+  }
+
+  #article--1 {
+    grid-area: article--1;
+  }
+
+  #article--2 {
+    grid-area: article--2;
+  }
+
+  #article--3 {
+    grid-area: article--3;
+  }
+}
+
 .hidden {
   transition: all 5s ease-in;
   display: none;

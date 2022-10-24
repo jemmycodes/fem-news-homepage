@@ -23,14 +23,14 @@
   </head>
   <body class="bg-offWhite">
     <!--Mobile Navigation  -->
-    <nav class="flex justify-between items-center p-8 max-w-[976px] mx-auto">
+    <nav class="flex justify-between items-center p-8 max-w-[1176px] mx-auto">
       <aside
         id="overlay"
-        class="hidden absolute md:hidden min-h-screen min-w-screen bottom-0 bg-[#000] top-0 right-0 left-0 opacity-50"
+        class="hidden absolute lg:hidden min-h-screen min-w-screen bottom-0 bg-[#000] top-0 right-0 left-0 opacity-50"
       ></aside>
       <aside
         id="menu-bar"
-        class="hidden absolute md:hidden min-h-screen min-w-screen bottom-0 bg-offWhite top-0 right-0 left-[50vw]"
+        class="hidden absolute lg:hidden min-h-screen min-w-screen bottom-0 bg-offWhite top-0 right-0 left-[50vw]"
       >
         <ul class="text-xl pl-8 text-veryDarkBlue mt-44 space-y-6">
           <li>Home</li>
@@ -41,7 +41,7 @@
         </ul>
       </aside>
       <img src="images/logo.svg" alt="" />
-      <ul class="hidden md:flex space-x-8 text-darkGrayishBlue">
+      <ul class="hidden lg:flex space-x-8 text-darkGrayishBlue">
         <li class="hover:text-softRed hover:cursor-pointer">Home</li>
         <li class="hover:text-softRed hover:cursor-pointer">New</li>
         <li class="hover:text-softRed hover:cursor-pointer">Popular</li>
@@ -50,7 +50,7 @@
       </ul>
       <div
         id="hamburger"
-        class="md:hidden flex space-y-1 flex-col w-9 z-10 hover:cursor-pointer"
+        class="lg:hidden flex space-y-1 flex-col w-9 z-10 hover:cursor-pointer"
       >
         <div id="bar-1" class="w-full bg-veryDarkBlue h-1"></div>
         <div id="bar-2" class="w-full bg-veryDarkBlue h-1 mb-[.5rem]"></div>
@@ -59,59 +59,59 @@
     </nav>
     <main>
       <section
-        class="flex pt-6 hover:text-softRed px-8 flex-col max-w-[976px] mx-auto space-y-8"
+        id="main-container"
+        class="flex pt-6 md:pt-0 hover:text-softRed px-8 flex-col max-w-[1176px] mx-auto space-y-8 md:space-y-0 lg:space-y-0"
       >
         <figure id="image-desktop">
           <img
             src="images/image-web-3-mobile.jpg"
             alt="Web 3 representation"
-            class="md:hidden"
+            class="lg:hidden"
           />
           <img
             id="image-desktop"
             src="images/image-web-3-desktop.jpg"
             alt="Web 3 representation"
-            class="hidden md:flex"
+            class="hidden lg:flex"
           />
         </figure>
-        <section
-          id="text"
-          class="flex flex-col md:flex-row md:justify-between space-y-4"
-        >
-          <p class="text-veryDarkBlue text-5xl font-extrabold">
-            The Bright Future of Web 3.0?
-          </p>
-          <article class="flex flex-col space-y-6">
-            <p class="text-grayishBlue text-[15px]">
-              We dive into the next evolution of the web that claims to put the
-              power of the platforms back into the hands of the people. But is
-              it really fulfilling its promise
-            </p>
 
-            <a
-              href="#"
-              class="uppercase bg-softRed tracking-widest text-offWhite px-7 py-3 w-fit hover:bg-veryDarkBlue"
-              >read more</a
-            >
-          </article>
-        </section>
-        <aside
-          id="sidebar"
-          class="flex flex-col p-8 bg-veryDarkBlue space-y-10"
-        >
-          <p class="text-softOrange text-3xl font-bold md:row-span-3">New</p>
-          <hgroup
-            class="border border-x-transparent border-b-darkGrayishBlue border-t-transparent pb-10 space-y-2"
+        <p id="heading" class="text-veryDarkBlue text-5xl font-extrabold">
+          The Bright Future of Web 3.0?
+        </p>
+        <article id="text" class="flex flex-col space-y-6">
+          <p class="text-grayishBlue text-[15px]">
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise
+          </p>
+
+          <a
+            href="#"
+            class="uppercase bg-softRed tracking-widest text-offWhite px-7 py-3 w-fit hover:bg-veryDarkBlue"
+            >read more</a
           >
-            <h3 class="font-bold text-offWhite">Hydrogen VS Electric Cars</h3>
+        </article>
+        <aside id="sidebar" class="flex flex-col p-8 bg-veryDarkBlue space-y-8">
+          <p class="text-softOrange text-3xl font-bold lg:row-span-3">New</p>
+          <hgroup
+            class="border border-x-transparent border-b-darkGrayishBlue border-t-transparent pb-6 space-y-2"
+          >
+            <h3
+              class="font-bold text-offWhite hover:cursor-pointer hover:text-softOrange"
+            >
+              Hydrogen VS Electric Cars
+            </h3>
             <p class="text-darkGrayishBlue">
               Will hydrogen-fueled cars ever catch up to EVs?
             </p>
           </hgroup>
           <hgroup
-            class="border border-x-transparent border-b-darkGrayishBlue border-t-transparent pb-10 space-y-2"
+            class="border border-x-transparent border-b-darkGrayishBlue border-t-transparent pb-6 space-y-2"
           >
-            <h3 class="font-bold text-offWhite">
+            <h3
+              class="font-bold text-offWhite hover:cursor-pointer hover:text-softOrange"
+            >
               The Downsides of Al Artistry
             </h3>
             <p class="text-darkGrayishBlue">
@@ -120,61 +120,67 @@
             </p>
           </hgroup>
           <hgroup class="space-y-2">
-            <h3 class="font-bold text-offWhite">Is VC Funding Drying Up</h3>
+            <h3
+              class="font-bold text-offWhite hover:cursor-pointer hover:text-softOrange"
+            >
+              Is VC Funding Drying Up
+            </h3>
             <p class="text-darkGrayishBlue">
               Private funding by VC firms id down 50% YOY. We take a look at
               what that means.
             </p>
           </hgroup>
         </aside>
-        <section class="flex flex-col space-y-6">
-          <article class="flex space-x-10 justify-between align-top">
-            <figcaption>
-              <img src="images/image-retro-pcs.jpg " class="max-w-[7rem]" />
-            </figcaption>
-            <hgroup class="flex justify-between flex-col">
-              <p class="text-4xl font-bold text-grayishBlue">01</p>
-              <p class="text-veryDarkBlue font-extrabold hover:text-softRed">
-                Reviving Retro PCs
-              </p>
-              <p class="text-grayishBlue">
-                What happens when old PC's are given mordern upgrades?
-              </p>
-            </hgroup>
-          </article>
-          <article class="flex space-x-10 justify-between">
-            <figcaption>
-              <img src="images/image-top-laptops.jpg" class="max-w-[7rem]" />
-            </figcaption>
-            <hgroup class="flex justify-between flex-col">
-              <p class="text-4xl font-bold text-grayishBlue">02</p>
-              <p
-                class="text-veryDarkBlue font-extrabold hover:text-softRed hover:cursor-pointer"
-              >
-                Top 10 Laptops of 2022
-              </p>
-              <p class="text-grayishBlue">
-                Our best picks for various needs and budgets.
-              </p>
-            </hgroup>
-          </article>
-          <article class="flex space-x-10 justify-between pb-12">
-            <figcaption>
-              <img src="images/image-gaming-growth.jpg" class="max-w-[7rem]" />
-            </figcaption>
-            <hgroup class="flex justify-between flex-col">
-              <p class="text-4xl font-bold text-grayishBlue">03</p>
-              <p
-                class="text-veryDarkBlue font-extrabold hover:text-softRed hover:cursor-pointer"
-              >
-                The Growth of Gaming
-              </p>
-              <p class="text-grayishBlue">
-                How the pandemic has sparked fresh opportunities.
-              </p>
-            </hgroup>
-          </article>
-        </section>
+
+        <article id="article--1" class="flex space-x-5 pb-12">
+          <figcaption>
+            <img src="images/image-retro-pcs.jpg" class="h-full w-48" />
+          </figcaption>
+          <hgroup class="flex justify-between flex-col">
+            <p class="text-4xl font-bold text-grayishBlue">01</p>
+            <p
+              class="text-veryDarkBlue font-extrabold hover:text-softRed hover:cursor-pointer"
+            >
+              Reviving Retro PC's
+            </p>
+            <p class="text-grayishBlue">
+              What happens when an old PC is given modern upgrades?
+            </p>
+          </hgroup>
+        </article>
+
+        <article id="article--2" class="flex space-x-5 pb-12">
+          <figcaption>
+            <img src="images/image-top-laptops.jpg" class="h-full w-48" />
+          </figcaption>
+          <hgroup class="flex justify-between flex-col">
+            <p class="text-4xl font-bold text-grayishBlue">02</p>
+            <p
+              class="text-veryDarkBlue font-extrabold hover:text-softRed hover:cursor-pointer"
+            >
+              Top Ten Laptop of 2022
+            </p>
+            <p class="text-grayishBlue">
+              Our best picks for various various needs and budget
+            </p>
+          </hgroup>
+        </article>
+        <article id="article--3" class="flex space-x-5 pb-12">
+          <figcaption>
+            <img src="images/image-gaming-growth.jpg" class="h-full w-48" />
+          </figcaption>
+          <hgroup class="flex justify-between flex-col">
+            <p class="text-4xl font-bold text-grayishBlue">03</p>
+            <p
+              class="text-veryDarkBlue font-extrabold hover:text-softRed hover:cursor-pointer"
+            >
+              The Growth of Gaming
+            </p>
+            <p class="text-grayishBlue">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </hgroup>
+        </article>
       </section>
     </main>
   </body>
