@@ -6,6 +6,7 @@ const menuBar = document.querySelector("#menu-bar");
 const bar1 = document.querySelector("#bar-1");
 const bar2 = document.querySelector("#bar-2");
 const bar3 = document.querySelector("#bar-3");
+const body = document.querySelector("body");
 
 // open nav-bar and overlay modal
 const openNav = () => {
@@ -14,6 +15,7 @@ const openNav = () => {
   bar1.classList.toggle("bar-1");
   bar3.classList.toggle("bar-3");
   bar2.classList.toggle("hidden");
+  body.classList.toggle("overflow-hidden");
 };
 
 hamburger.addEventListener("click", openNav);
